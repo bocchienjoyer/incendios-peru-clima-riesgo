@@ -18,6 +18,8 @@ data/interim/
 *.grib
 *.grib2
 *.zip
+*.rar
+*.part
 
 # Archivos del sistema
 .DS_Store

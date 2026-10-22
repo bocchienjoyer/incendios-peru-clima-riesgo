@@ -1,0 +1,90 @@
+{
+  "fecha_corte_utc": "2026-10-22T01:25:32.739386+00:00",
+  "ventana_h": 168,
+  "reciente_h": 48,
+  "distancia_pareja_m": 1000,
+  "tiempo_pareja_h": 48,
+  "detecciones_validas_peru": 2727,
+  "detecciones_recientes_48h": 234,
+  "agrupaciones_total": 1264,
+  "agrupaciones_recientes": 131,
+  "parejas_enlazadas": 4417,
+  "coincidencias_limite_resueltas_por_codigo": 0,
+  "recientes_a_revisar": 1,
+  "asignacion_departamento": "Mayor número de detecciones de últimas 48 h; si no hay, de 168 h. Empate por código.",
+  "advertencia": "Agrupaciones aproximadas; no incendios confirmados ni prioridad agrícola. Encadenamientos pendientes de revisión.",
+  "top_conteo_agrupaciones": [
+    {
+      "codigo_departamento": "25",
+      "departamento": "UCAYALI",
+      "detecciones_168h": 783,
+      "detecciones_48h": 51,
+      "agrupaciones_168h": 330,
+      "agrupaciones_recientes_48h": 29,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "17",
+      "departamento": "MADRE DE DIOS",
+      "detecciones_168h": 46,
+      "detecciones_48h": 46,
+      "agrupaciones_168h": 22,
+      "agrupaciones_recientes_48h": 22,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "12",
+      "departamento": "JUNIN",
+      "detecciones_168h": 331,
+      "detecciones_48h": 35,
+      "agrupaciones_168h": 161,
+      "agrupaciones_recientes_48h": 17,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "19",
+      "departamento": "PASCO",
+      "detecciones_168h": 81,
+      "detecciones_48h": 16,
+      "agrupaciones_168h": 52,
+      "agrupaciones_recientes_48h": 11,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "06",
+      "departamento": "CAJAMARCA",
+      "detecciones_168h": 26,
+      "detecciones_48h": 11,
+      "agrupaciones_168h": 23,
+      "agrupaciones_recientes_48h": 10,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "16",
+      "departamento": "LORETO",
+      "detecciones_168h": 223,
+      "detecciones_48h": 11,
+      "agrupaciones_168h": 139,
+      "agrupaciones_recientes_48h": 9,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "18",
+      "departamento": "MOQUEGUA",
+      "detecciones_168h": 38,
+      "detecciones_48h": 17,
+      "agrupaciones_168h": 14,
+      "agrupaciones_recientes_48h": 5,
+      "agrupaciones_a_revisar": 0
+    },
+    {
+      "codigo_departamento": "04",
+      "departamento": "AREQUIPA",
+      "detecciones_168h": 120,
+      "detecciones_48h": 16,
+      "agrupaciones_168h": 23,
+      "agrupaciones_recientes_48h": 4,
+      "agrupaciones_a_revisar": 0
+    }
+  ]
+}

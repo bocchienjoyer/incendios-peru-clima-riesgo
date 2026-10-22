@@ -1,0 +1,128 @@
+{
+  "fecha_corte_detecciones_utc": "2026-10-22T01:25:32.739386+00:00",
+  "buffer_m": 1000,
+  "seleccion": "Una agrupación con más detecciones recientes en cada uno de los tres departamentos con más agrupaciones recientes; excluye grupos marcados para revisión.",
+  "advertencia": "Muestra de factibilidad, no ranking nacional. MIDAGRI es superficie agrícola cartografiada; WorldCover clase 40 no cubre todos los cultivos. Los escenarios meteorológicos no están calibrados.",
+  "resultados": [
+    {
+      "grupo_id": "G1161",
+      "departamento": "UCAYALI",
+      "latitud": -9.37077,
+      "longitud": -74.31462,
+      "detecciones_48h": 8,
+      "entorno_ha": 591.41,
+      "midagri_agricola_ha": 3.6,
+      "worldcover_cultivo_ha": 0.02,
+      "coinciden_ha_aprox": 0.0,
+      "midagri_sin_clase40_ha_aprox": 3.66,
+      "clase40_fuera_midagri_ha_aprox": 0.02,
+      "worldcover_valido_pct_pixeles": 100.0,
+      "midagri_geometrias_reparadas": 0,
+      "worldcover_teselas": [
+        "ESA_WorldCover_10m_2021_v200_S12W075"
+      ],
+      "worldcover_clases_en_midagri_ha": {
+        "10": 3.66
+      },
+      "recorte_sha256": "7a7b3afc5326803152e4d5a14f0b2b36f8970838bc03ab9a09adc6a8ba9cc500",
+      "meteorologia_modelo": "ecmwf_ifs",
+      "meteorologia_url": "https://api.open-meteo.com/v1/forecast?latitude=-9.37077&longitude=-74.31462&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation&models=ecmwf_ifs&forecast_days=8&past_days=1&timezone=America%2FLima&wind_speed_unit=kmh",
+      "meteorologia_descarga_utc": "2026-10-22T01:45:08.211841+00:00",
+      "celda_latitud": -9.384886,
+      "celda_longitud": -74.28323,
+      "horas_horizonte": 168,
+      "horas_evaluables": 168,
+      "horas_escenario_30_20_2": 0,
+      "horas_escenario_40_15_2": 0,
+      "tmax_pronostico_c": 34.3,
+      "lluvia_pronostico_168h_mm": 49.0,
+      "humedad_min_pct": 50.0,
+      "viento_max_kmh": 12.2,
+      "clase_wc_en_detecciones_48h": {
+        "10": 1,
+        "80": 7
+      }
+    },
+    {
+      "grupo_id": "G1140",
+      "departamento": "MADRE DE DIOS",
+      "latitud": -12.18576,
+      "longitud": -69.1106,
+      "detecciones_48h": 7,
+      "entorno_ha": 724.72,
+      "midagri_agricola_ha": 91.15,
+      "worldcover_cultivo_ha": 0.16,
+      "coinciden_ha_aprox": 0.16,
+      "midagri_sin_clase40_ha_aprox": 91.16,
+      "clase40_fuera_midagri_ha_aprox": 0.0,
+      "worldcover_valido_pct_pixeles": 100.0,
+      "midagri_geometrias_reparadas": 0,
+      "worldcover_teselas": [
+        "ESA_WorldCover_10m_2021_v200_S15W072"
+      ],
+      "worldcover_clases_en_midagri_ha": {
+        "10": 37.05,
+        "30": 54.03,
+        "40": 0.16,
+        "50": 0.08
+      },
+      "recorte_sha256": "656016a7104c6e900d05bd73f45873ea4d76dba2dd3090fa3b8ca486f0879f42",
+      "meteorologia_modelo": "ecmwf_ifs",
+      "meteorologia_url": "https://api.open-meteo.com/v1/forecast?latitude=-12.18576&longitude=-69.1106&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation&models=ecmwf_ifs&forecast_days=8&past_days=1&timezone=America%2FLima&wind_speed_unit=kmh",
+      "meteorologia_descarga_utc": "2026-10-22T01:45:10.773801+00:00",
+      "celda_latitud": -12.196836,
+      "celda_longitud": -69.099915,
+      "horas_horizonte": 168,
+      "horas_evaluables": 168,
+      "horas_escenario_30_20_2": 0,
+      "horas_escenario_40_15_2": 0,
+      "tmax_pronostico_c": 34.6,
+      "lluvia_pronostico_168h_mm": 65.3,
+      "humedad_min_pct": 47.0,
+      "viento_max_kmh": 17.1,
+      "clase_wc_en_detecciones_48h": {
+        "10": 6,
+        "30": 1
+      }
+    },
+    {
+      "grupo_id": "G1109",
+      "departamento": "JUNIN",
+      "latitud": -11.88402,
+      "longitud": -73.8658,
+      "detecciones_48h": 10,
+      "entorno_ha": 727.57,
+      "midagri_agricola_ha": 33.52,
+      "worldcover_cultivo_ha": 0.0,
+      "coinciden_ha_aprox": 0.0,
+      "midagri_sin_clase40_ha_aprox": 33.53,
+      "clase40_fuera_midagri_ha_aprox": 0.0,
+      "worldcover_valido_pct_pixeles": 100.0,
+      "midagri_geometrias_reparadas": 1,
+      "worldcover_teselas": [
+        "ESA_WorldCover_10m_2021_v200_S12W075"
+      ],
+      "worldcover_clases_en_midagri_ha": {
+        "10": 33.08,
+        "30": 0.45
+      },
+      "recorte_sha256": "cac4f28dc0fff4987e0a43e205b5df3f65ffa517686e9d92381c7deb4ba1a3da",
+      "meteorologia_modelo": "ecmwf_ifs",
+      "meteorologia_url": "https://api.open-meteo.com/v1/forecast?latitude=-11.88402&longitude=-73.8658&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation&models=ecmwf_ifs&forecast_days=8&past_days=1&timezone=America%2FLima&wind_speed_unit=kmh",
+      "meteorologia_descarga_utc": "2026-10-22T01:45:18.331423+00:00",
+      "celda_latitud": -11.845343,
+      "celda_longitud": -73.87097,
+      "horas_horizonte": 168,
+      "horas_evaluables": 168,
+      "horas_escenario_30_20_2": 0,
+      "horas_escenario_40_15_2": 0,
+      "tmax_pronostico_c": 31.8,
+      "lluvia_pronostico_168h_mm": 17.8,
+      "humedad_min_pct": 47.0,
+      "viento_max_kmh": 10.3,
+      "clase_wc_en_detecciones_48h": {
+        "10": 10
+      }
+    }
+  ]
+}

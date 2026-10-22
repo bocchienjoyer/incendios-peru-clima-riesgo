@@ -4,7 +4,7 @@ Revisión del 21 de octubre de 2026. Alcance ajustado a la aclaración del estud
 
 ## 1. Pregunta y producto
 
-**¿Qué zonas agrícolas cercanas a detecciones recientes de fuego coinciden con condiciones meteorológicas favorables a su propagación durante los próximos siete días, y en qué departamentos se concentran?**
+**¿Qué zonas agrícolas cercanas a detecciones recientes de fuego coinciden con condiciones meteorológicas favorables para su propagación durante los próximos siete días, y en qué departamentos se concentran?**
 
 El foco es agrícola: identificar proximidad entre cultivos cartografiados y fuego reciente, e interpretar esa proximidad junto a las condiciones meteorológicas. El resultado será un insumo exploratorio para priorizar vigilancia agrícola. No se medirá pérdida de producción ni daño confirmado.
 
@@ -14,7 +14,7 @@ El foco es agrícola: identificar proximidad entre cultivos cartografiados y fue
 | Bueno | Lo anterior cruzado con cultivos cartografiados: superficie y fracción de cultivo cerca de las detecciones |
 | Excelente | Dashboard público que explique los hallazgos, permita explorar el mapa y muestre método y límites |
 
-No se calcularán NBR, dNBR, hectáreas quemadas, perímetros futuros ni probabilidades de ignición. Sentinel-2 queda fuera del plan de ejecución. El Niño permanece como contexto oficial; una comparación histórica local de temperatura es opcional y posterior al núcleo.
+No se calcularán NBR, dNBR, hectáreas quemadas, perímetros futuros ni probabilidades de ignición. Una imagen óptica fechada podrá usarse como referencia visual del dashboard, sin añadir análisis de área quemada. El Niño permanece como contexto oficial; una comparación histórica local de temperatura es opcional y posterior al núcleo.
 
 ## 2. Por qué cruzar con cultivos
 
@@ -24,7 +24,7 @@ La hipótesis del estudiante es que temperaturas elevadas y lluvia escasa pueden
 
 | Cruce evaluado | Pregunta adicional | Decisión |
 |---|---|---|
-| WorldCover, clase 40 | ¿Cuánta superficie clasificada como cultivo hay cerca de detecciones con condiciones favorables? | Elegido como base raster disponible |
+| MIDAGRI 2024 + WorldCover | ¿Cuánta superficie agrícola hay cerca de detecciones con condiciones favorables y qué cobertura raster presenta? | Elegido después del piloto; MIDAGRI localiza superficie agrícola y WorldCover la caracteriza |
 | WorldPop | ¿Cuánta población vive cerca? | Útil para exposición humana; añade antigüedad y supuestos de distribución poblacional |
 | Áreas protegidas | ¿Qué prioridades coinciden con espacios protegidos? | Útil para conservación, pero principalmente vectorial; extensión posible |
 
@@ -32,7 +32,7 @@ WorldCover 2021 tiene clases a 10 m; se usará como contexto histórico de cober
 
 **Límite agrícola fundamental:** el manual define la clase 40 principalmente como cultivo anual herbáceo; los cultivos leñosos permanentes pueden quedar en árboles/matorrales y los invernaderos en urbano. No presentarla como el universo de cultivos peruanos ni afirmar ausencia de agricultura donde la clase 40 sea cero. No identifica especie cultivada, riego, campaña o si la parcela sigue en producción en 2026.
 
-Se encontró una actualización del Mapa Nacional de Superficie Agrícola, oficializada por MIDAGRI en 2025 con trabajo cartográfico concluido en 2024. Su acceso geográfico, licencia y compatibilidad con el objetivo aún deben verificarse; la fecha de oficialización no equivale a fecha de cultivo activo. Es el complemento candidato si queremos ampliar cobertura a agricultura leñosa y otros terrenos agrícolas. No reemplazarlo por cifras departamentales repartidas artificialmente entre píxeles.
+Se descargó el Mapa Nacional de Superficie Agrícola enlazado por MIDAGRI como 2024, oficializado en 2025. El shapefile tiene 1.827 registros, categoría AGRICOLA, fuente de interpretación Planet/Google Earth 2024 y total de atributo de 11.248.646,32 ha, coherente con la actualización oficial. Su fecha no equivale a cultivo activo hoy. La muestra demuestra diferencias importantes frente a la clase 40; por eso MIDAGRI será la referencia de superficie agrícola y WorldCover caracterizará su cobertura. No se unirán ambas capas por simple suma ni se asumirá que todo árbol dentro de MIDAGRI es café o frutal. No se encontró una licencia abierta explícita en el paquete; se conservará el nacional localmente con atribución y se publicarán resultados agregados.
 
 ## 3. Diseño espacial y temporal
 
@@ -62,13 +62,13 @@ Como contexto agrícola, resumir precipitación de los 14 días anteriores y dí
 
 ## 5. Qué hará el análisis raster
 
-WorldCover será el raster central del trabajo:
+WorldCover será el raster central del trabajo, cruzado con las geometrías agrícolas de MIDAGRI:
 
 1. Inspeccionar banda, CRS, transformación, resolución, tipo de dato, clases y NoData.
 2. Leer únicamente ventanas necesarias de los GeoTIFF optimizados para acceso remoto; evitar descargar el país completo a 10 m.
 3. Crear buffers en una proyección métrica adecuada y transformar sus polígonos al CRS del raster antes del recorte.
 4. Recortar, enmascarar NoData y contar píxeles válidos por categoría. Para superficies, ponderar área de píxel/intersección o emplear una proyección adecuada; no convertir grados cuadrados en hectáreas.
-5. Obtener una fila por agrupación con superficie clasificada como cultivo, fracción de cultivo y fracciones de otras clases. El denominador será el entorno con observación válida; reportar también la fracción no observable. Las hectáreas se etiquetarán como cultivo cartografiado cercano, nunca cultivo quemado o perdido.
+5. Obtener una fila por agrupación con superficie agrícola MIDAGRI, clase 40 de WorldCover, área de coincidencia y clases raster dentro de la superficie agrícola. El denominador de las proporciones raster será la superficie con observación válida; reportar también la fracción no observable. Las hectáreas se etiquetarán como superficie agrícola cartografiada cercana, nunca cultivo quemado o perdido.
 6. Comparar inclusión por centro de píxel frente a `all_touched` en bordes. No promediar los códigos de clase: una media de 10 y 40 no representa una cobertura real.
 7. Usar vecino más cercano si es necesario remuestrear categorías. No ampliar la meteorología a 10 m para fingir detalle climático local.
 
@@ -112,7 +112,7 @@ La tabla por departamento incluirá detecciones, agrupaciones recientes, agrupac
 
 ### Paso 6 — Dashboard público
 
-Página interactiva con datos ya procesados: pregunta, tres hallazgos, fecha de corte, mapa, filtro departamental, tabla de prioridades, curvas meteorológicas, cobertura, contexto de El Niño y método. Propuesta técnica: HTML estático en GitHub Pages, verificando acceso sin cuenta y uso en móvil.
+Página interactiva con datos ya procesados: pregunta, tres hallazgos, fecha de corte, un solo mapa con capas intercambiables, selector departamental, tabla de prioridades, curvas meteorológicas, cobertura, contexto de El Niño y método. El mapa podrá mostrar imagen satelital de referencia, superficie agrícola y detecciones; el relieve 3D será opcional y acotado a las zonas de interés. Propuesta técnica: HTML estático en GitHub Pages, verificando acceso sin cuenta y uso en móvil. Ver [decisiones del dashboard](DASHBOARD.md).
 
 No recalcular raster ni llamar APIs desde el navegador del lector. La primera versión será una captura fechada, sin prometer actualización automática. Las horas anteriores al corte obtenidas con `past_days` son pronósticos archivados, no observaciones de estaciones. Los datos originales pesados quedarán fuera de Git.
 
@@ -121,6 +121,8 @@ No recalcular raster ni llamar APIs desde el navegador del lector. La primera ve
 Después del núcleo se podrá evaluar una malla de zonas con vegetación y sin detecciones recientes. Esa evaluación necesita muestreo espacial explícito, no solo puntos donde ya se detectó fuego. Permitirá hablar de condiciones favorables; para probabilidades de nuevos incendios faltan igniciones, combustible actual y validación histórica.
 
 La comparación histórica de temperatura, población y áreas protegidas son extensiones. No se incorporarán todas. Orden de trabajo: fuentes verificadas → detecciones y meteorología → cobertura raster → hallazgos revisados → dashboard.
+
+Para mantener un alcance realista, se reutilizará una única descarga MIDAGRI, se leerán ventanas WorldCover y se consultarán ubicaciones meteorológicas sin replicar celdas innecesariamente. Si el 3D o una capa térmica continua requieren infraestructura, claves o procesamiento desproporcionado, se entregará el mapa 2D con imagen satelital y focos, que responde la pregunta. No se hará una animación o simulación de incendios.
 
 ## 8. Organización y reproducción
 

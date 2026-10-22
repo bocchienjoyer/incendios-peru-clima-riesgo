@@ -1,0 +1,39 @@
+{
+  "consulta_utc": "2026-10-22T01:40:39.984782+00:00",
+  "portal_oficial": "https://siea.midagri.gob.pe/herramientas/superficie-agricola",
+  "archivo_id": "11XHc0X8fQb1u-XcnIPqPQmDPTp9nPUyU",
+  "nombre": "MNSA_2024.rar",
+  "bytes_metadatos_drive": 401542766,
+  "url_descarga_publica": "https://drive.usercontent.google.com/download?id=11XHc0X8fQb1u-XcnIPqPQmDPTp9nPUyU&export=download&confirm=t",
+  "nota": "Sin redistribución del archivo nacional.",
+  "bytes": 401542766,
+  "sha256": "6b3268fc99254b6ae46f9cfe4ce1d9c848c064ffb68b59f434aac57bffff563a",
+  "estado": "descargado",
+  "shapefile": {
+    "crs": "EPSG:4326",
+    "registros": 1827,
+    "campos": [
+      "OBJECTID",
+      "IDDPTO",
+      "NOMBDEP",
+      "IDPROV",
+      "NOMBPROV",
+      "IDDIST",
+      "NOMBDIST",
+      "ZONA_DIST",
+      "AREA_HA",
+      "CATEGORIA",
+      "FUENTE"
+    ],
+    "categoria": [
+      "AGRICOLA"
+    ],
+    "fuente": [
+      "Interpretación de imágenes Planet y Google Earth. DGESEP - MIDAGRI (2024)"
+    ],
+    "area_ha_atributo": 11248646.324268978,
+    "departamentos_en_atributos": 24,
+    "fecha_dbf": "2025-02-03"
+  },
+  "licencia": "No se encontró licencia abierta explícita en el paquete; nacional conservado localmente con atribución."
+}
