@@ -30,6 +30,8 @@ def main():
     for name in ['dashboard_datos.json','tabla_departamental_nacional.csv','tabla_agrupaciones_nacional.csv','meteorologia_diaria_nacional.csv']:
         shutil.copy2(ROOT/'data/processed'/name, assets/name)
     shutil.copy2(ROOT/'outputs/puno_contexto.jpg',assets/'puno_contexto.jpg')
+    if (ROOT/'docs/TIQUILLACA_CASO.json').exists():
+        shutil.copy2(ROOT/'docs/TIQUILLACA_CASO.json',assets/'tiquillaca_caso.json')
     data=json.loads((assets/'dashboard_datos.json').read_text(encoding='utf-8'))
     groups=data['agrupaciones']; ids={g['grupo_id'] for g in groups}
     pts=pd.read_csv(ROOT/'data/processed/detecciones_preparadas.csv')
@@ -55,7 +57,7 @@ def main():
         for band in range(3):
             reproject(src.read(band+1),rgb[band],src_transform=src.transform,src_crs=src.crs,dst_transform=target,dst_crs='EPSG:4326',resampling=Resampling.bilinear)
     Image.fromarray(np.moveaxis(rgb,0,-1)).save(assets/'puno_satelite.jpg',quality=90)
-    colors={10:[41,110,70],20:[157,162,76],30:[196,187,120],40:[246,201,70],50:[206,92,103],60:[149,143,133],70:[239,245,255],80:[57,132,197],90:[82,163,174],95:[33,123,110],100:[170,150,95]}
+    colors={10:[41,110,70],20:[157,162,76],30:[77,139,89],40:[246,201,70],50:[206,92,103],60:[149,143,133],70:[239,245,255],80:[57,132,197],90:[82,163,174],95:[33,123,110],100:[170,150,95]}
     with rasterio.open(ROOT/'data/raw/nacional/G1184_worldcover_recorte.tif') as src:
         wc=np.zeros((768,768),dtype='uint8')
         reproject(src.read(1),wc,src_transform=src.transform,src_crs=src.crs,dst_transform=target,dst_crs='EPSG:4326',resampling=Resampling.nearest)

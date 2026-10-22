@@ -6,6 +6,12 @@ La pregunta se conserva: ¿Qué zonas agrícolas cercanas a detecciones reciente
 
 ## Implementación entregada
 
+La revisión de claridad presenta primero la pregunta, después el caso localizado en Tiquillaca (provincia de Puno) y su significado, luego el comparador nacional y el visor 3D. Se conserva al final una metodología ampliada con fechas por fuente, operaciones raster, criterios, cinco registros horarios y procedencia de la ubicación. No se recalculó el análisis nacional.
+
+El caso se comunica como dos detecciones a unos 610 m de agricultura cartografiada, con 5,08 ha dentro de la unión de entornos de 1 km. Las cinco horas del escenario principal se explican con fechas y valores; no representan duración del incendio. Ver [detalle trazable del caso](TIQUILLACA_CASO.json).
+
+El visor distingue imagen óptica, cobertura del suelo 2021 y altitud en metros, con texto y leyendas que cambian según la selección. La zona gris de cobertura queda fuera del recorte; los colores no representan calor ni riesgo. Se eliminó el bloque raster repetido y se trasladó su contenido a la metodología.
+
 - Narrativa nacional: 131 grupos recientes, 106 con agricultura cercana y 12.910,68 ha únicas; una coincidencia comparable en Puno.
 - Mapa con filtro de departamento, selección de grupo, contornos agrícolas y anillos de 1 km por detección. Los puntos nacionales representan agrupaciones; al acercarse se ven las detecciones del grupo seleccionado.
 - Pronóstico diario: horas base o alternativas, temperatura, humedad, viento y lluvia diaria. La clasificación usa lluvia acumulada previa de 24 h, distinta de la lluvia diaria de contexto.

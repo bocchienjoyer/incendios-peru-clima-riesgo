@@ -1,6 +1,6 @@
 # Fuego y agricultura · Perú
 
-Dashboard público estático del análisis académico de detecciones recientes, agricultura y meteorología. Sitio en español con mapa nacional, filtros, tabla departamental, pronóstico diario y escena 3D real de Puno.
+Dashboard público estático del análisis académico de detecciones recientes, agricultura y meteorología. Sitio en español con mapa nacional, filtros, tabla departamental, pronóstico diario y escena 3D real de Tiquillaca (provincia de Puno).
 
 El análisis reproducible y las decisiones metodológicas están en https://github.com/bocchienjoyer/incendios-peru-clima-riesgo.
 

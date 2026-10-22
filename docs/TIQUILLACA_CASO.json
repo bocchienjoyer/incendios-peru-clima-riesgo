@@ -1,0 +1,64 @@
+{
+  "grupo_id": "G1184",
+  "distrito": "Tiquillaca",
+  "provincia": "Puno",
+  "departamento": "Puno",
+  "ubicacion_fuente": "OpenStreetMap / Nominatim, límite distrital relación 1913519; ambas detecciones dentro del polígono",
+  "ubicacion_url": "https://www.openstreetmap.org/relation/1913519",
+  "fecha_verificacion_local": "2026-10-21",
+  "distancia_crs": "EPSG:32719",
+  "distancias_deteccion_a_midagri_m": [
+    608.7,
+    757.4
+  ],
+  "detecciones": [
+    {
+      "latitude": -15.88947,
+      "longitude": -70.17003,
+      "fecha_utc": "2026-10-21T18:53:00+00:00"
+    },
+    {
+      "latitude": -15.88872,
+      "longitude": -70.16604,
+      "fecha_utc": "2026-10-21T18:53:00+00:00"
+    }
+  ],
+  "horas_principal": [
+    {
+      "hora_lima": "2026-10-27 14:00:00-05:00",
+      "temperature_2m": 13.6,
+      "relative_humidity_2m": 25,
+      "wind_speed_10m": 20.4,
+      "lluvia_24h": 0.5
+    },
+    {
+      "hora_lima": "2026-10-28 12:00:00-05:00",
+      "temperature_2m": 15.7,
+      "relative_humidity_2m": 21,
+      "wind_speed_10m": 21.8,
+      "lluvia_24h": 0.6
+    },
+    {
+      "hora_lima": "2026-10-28 13:00:00-05:00",
+      "temperature_2m": 16.2,
+      "relative_humidity_2m": 19,
+      "wind_speed_10m": 23.0,
+      "lluvia_24h": 0.6000000000000001
+    },
+    {
+      "hora_lima": "2026-10-28 14:00:00-05:00",
+      "temperature_2m": 15.6,
+      "relative_humidity_2m": 20,
+      "wind_speed_10m": 22.2,
+      "lluvia_24h": 0.6000000000000001
+    },
+    {
+      "hora_lima": "2026-10-28 15:00:00-05:00",
+      "temperature_2m": 13.9,
+      "relative_humidity_2m": 24,
+      "wind_speed_10m": 20.2,
+      "lluvia_24h": 0.6000000000000001
+    }
+  ],
+  "limites": "No confirma incendio activo futuro, plantación identificada, cultivo activo o daños. Distancia a cartografía MIDAGRI 2024."
+}
