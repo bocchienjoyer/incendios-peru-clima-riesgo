@@ -1,0 +1,25 @@
+# Entornos y archivos temporales
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Datos originales y productos pesados
+data/raw/
+data/interim/
+*.tif
+*.tiff
+*.jp2
+*.nc
+*.grib
+*.grib2
+*.zip
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
