@@ -29,4 +29,4 @@ La imagen de Puno es Sentinel-2 del 17/10/2026, previa a las detecciones analiza
 
 ![Imagen óptica de contexto en Puno](../outputs/puno_contexto.jpg)
 
-La fase de análisis nacional queda lista para construir el dashboard. El mapa 2D y la narrativa son la siguiente entrega; el 3D sigue siendo opcional.
+El [dashboard público](https://peru-fuego-agricultura.fancyperch2.chatgpt.site) presenta estos resultados con mapa por departamento, tabla, pronóstico diario y vista 3D real de Puno. Ver [funciones y comprobaciones](DASHBOARD.md).

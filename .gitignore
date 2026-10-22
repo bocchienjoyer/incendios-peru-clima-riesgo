@@ -29,3 +29,7 @@ desktop.ini
 
 # Versión PNG óptica local; se publica JPEG ligero
 outputs/puno_contexto.png
+
+# Activos web generados por preparar_dashboard.py
+web/dist/assets/
+web/dist/vendor/

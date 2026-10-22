@@ -6,13 +6,15 @@ Proyecto del reto **F · Clima y riesgo**, de Ciencia de Datos con Python. El tr
 
 ## Estado
 
-Análisis nacional completado con corte del 21 de octubre de 2026. Tabla departamental y paquete de datos del dashboard disponibles; la página pública todavía no está publicada. Los números del ejemplo del profesor no son resultados de este proyecto.
+**[Abrir dashboard público: Fuego y agricultura · Perú](https://peru-fuego-agricultura.fancyperch2.chatgpt.site)**
+
+Análisis nacional y dashboard completados con corte de detecciones del 21 de octubre de 2026, 20:25 h de Lima, y pronóstico del 22 al 28 de octubre. Incluye mapa por departamento, tabla, pronóstico diario y relieve 3D real de Puno con capas de satélite, WorldCover y agricultura. Los números del ejemplo del profesor no son resultados de este proyecto.
 
 - [Hoja de ruta y decisiones metodológicas](docs/HOJA_DE_RUTA.md)
 - [Fuentes y requisitos de los datos](docs/FUENTES.md)
 - [Auditoría de acceso y calidad](docs/AUDITORIA_DATOS.md)
 - [Preparación y resultados del piloto agrícola](docs/AVANCE_PILOTO.md)
-- [Alcance previsto del mapa interactivo](docs/DASHBOARD.md)
+- [Dashboard: funciones, reproducción y comprobaciones](docs/DASHBOARD.md)
 - [Consigna del profesor](https://claude.ai/artifact/7PDjxhAxnnJV2K24rVKWT6)
 - [Material de la sesión 07: raster](https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/07-raster)
 
@@ -35,7 +37,7 @@ Un foco de calor es una detección, no un incendio individual ni una medida de s
 
 La clase agrícola de WorldCover representa principalmente cultivos anuales y puede omitir cultivos leñosos permanentes. La proximidad del fuego no prueba daño, aumento térmico en las parcelas ni pérdida de producción. Las hectáreas serán superficie agrícola cartografiada cercana, no cultivo perdido. MIDAGRI mejora la cobertura del inventario agrícola disponible, pero no acredita cultivo activo en cada parcela ni se asume más exacto en todos los lugares sin validación.
 
-Antes de publicar resultados, este README se completará con las fechas efectivas de cada fuente, el método ejecutado, al menos un mapa y tres hallazgos con números, conforme a la rúbrica.
+Los resultados nacionales y mapas se presentan en [RESULTADO_NACIONAL.md](docs/RESULTADO_NACIONAL.md) y en el dashboard. Fuentes: FIRMS S-NPP (captura fija); MIDAGRI 2024; WorldCover 2021; ECMWF IFS 9 km vía Open-Meteo (22–28 oct); Sentinel-2 (17 oct 2026); Terrain Tiles para visualizar el relieve. No hay actualización automática.
 
 ## Auditoría inicial
 
