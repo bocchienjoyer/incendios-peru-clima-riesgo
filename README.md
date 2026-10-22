@@ -6,7 +6,7 @@ Proyecto del reto **F · Clima y riesgo**, de Ciencia de Datos con Python. El tr
 
 ## Estado
 
-Fuentes auditadas, detecciones preparadas y piloto agrícola de tres zonas completado el 21 de octubre de 2026. Todavía no hay ranking nacional de prioridad ni dashboard publicado. Los números del ejemplo del profesor no son resultados de este proyecto.
+Análisis nacional completado con corte del 21 de octubre de 2026. Tabla departamental y paquete de datos del dashboard disponibles; la página pública todavía no está publicada. Los números del ejemplo del profesor no son resultados de este proyecto.
 
 - [Hoja de ruta y decisiones metodológicas](docs/HOJA_DE_RUTA.md)
 - [Fuentes y requisitos de los datos](docs/FUENTES.md)
@@ -60,3 +60,7 @@ python scripts/graficar_piloto.py
 ```
 
 La extracción se realiza tras comprobar el listado del archivo oficial. MIDAGRI nacional se conserva localmente (aproximadamente 402 MB comprimido); la web utilizará recortes y tablas pequeños. Las respuestas meteorológicas de este piloto quedan guardadas y no se actualizarán en silencio.
+
+## Resultado nacional
+
+[Informe nacional y mapas](docs/RESULTADO_NACIONAL.md): 131 agrupaciones evaluadas, 106 con superficie agrícola a menos de 1 km y una coincidencia agrícola bajo el escenario meteorológico base, en Puno. Escenarios exploratorios; no son una alerta ni daño confirmado.

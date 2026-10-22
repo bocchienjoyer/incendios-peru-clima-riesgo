@@ -31,15 +31,15 @@ def json_publico(url, path):
     return data
 
 
-def cobertura(group, points):
+def cobertura(group, points, crop_file=None):
     subset = points[(points.grupo_id == group.grupo_id) & points.reciente_48h]
     geo = gpd.GeoDataFrame(subset, geometry=gpd.points_from_xy(subset.longitude, subset.latitude), crs=4326)
     # UTM local para distancias; EPSG:6933 para áreas.
-    epsg = 32700 + int((group.longitud + 180) // 6 + 1)
+    epsg = (32700 if group.latitud < 0 else 32600) + int((group.longitud + 180) // 6 + 1)
     neighborhood = geo.to_crs(epsg).buffer(1000).union_all()
     aoi = gpd.GeoSeries([neighborhood], crs=epsg).to_crs(4326).iloc[0]
     area = gpd.GeoSeries([aoi], crs=4326).to_crs(6933).area.iloc[0] / 10000
-    crop_file = ROOT / 'data/raw/midagri/SuperficieAgricolaNacional.shp'
+    crop_file = crop_file or ROOT / 'data/raw/midagri/SuperficieAgricolaNacional.shp'
     crops = gpd.read_file(crop_file, bbox=aoi.bounds)
     bad = int((~crops.is_valid).sum())
     crops.geometry = crops.geometry.make_valid().intersection(aoi)

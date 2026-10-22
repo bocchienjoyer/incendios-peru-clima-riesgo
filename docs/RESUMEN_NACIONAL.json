@@ -1,0 +1,14 @@
+{
+  "agricola_cercana_ha_unicas": 12910.68,
+  "agrupaciones_comparables": 127,
+  "comparables_con_agricultura": 104,
+  "sensibilidad_grupos_base_por_buffer_m": {
+    "500": 0,
+    "1000": 1,
+    "2000": 1
+  },
+  "grupo_coincidente": "G1184",
+  "paquete_web_bytes": 310919,
+  "primera_hora_base_local": "2026-10-27T14:00:00-05:00",
+  "advertencia": "No es una alerta ni una estimación de pérdida agrícola."
+}

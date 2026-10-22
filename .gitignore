@@ -11,6 +11,7 @@ __pycache__/
 # Datos originales y productos pesados
 data/raw/
 data/interim/
+data/processed/nacional_meteo_*.csv
 *.tif
 *.tiff
 *.jp2
@@ -25,3 +26,6 @@ data/interim/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Versión PNG óptica local; se publica JPEG ligero
+outputs/puno_contexto.png

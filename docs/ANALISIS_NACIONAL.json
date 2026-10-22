@@ -1,0 +1,149 @@
+{
+  "corte_detecciones": "2026-10-22T01:25:32.739386+00:00",
+  "inicio_pronostico": "2026-10-22T05:00:00+00:00",
+  "buffer_m": 1000,
+  "escenario_base": [
+    30,
+    20,
+    2
+  ],
+  "escenario_sensibilidad": [
+    40,
+    15,
+    2
+  ],
+  "modelo": "ecmwf_ifs",
+  "elevacion": "nan",
+  "fin_pronostico_exclusivo": "2026-10-29T05:00:00+00:00",
+  "agrupaciones_recientes": 131,
+  "coberturas_ok": 131,
+  "agrupaciones_revision": 4,
+  "agrupaciones_con_agricultura": 106,
+  "coincidencias_base": 1,
+  "coincidencias_sensibilidad": 1,
+  "meteorologia_horas_completas": 131,
+  "celdas_meteorologicas_unicas": 116,
+  "top_departamentos": [
+    {
+      "codigo_departamento": "21",
+      "departamento": "PUNO",
+      "agrupaciones_recientes": 2,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 1,
+      "grupos_coincidencia_base": 1,
+      "grupos_coincidencia_sensibilidad": 1,
+      "agricola_cercana_ha_unicas": 5.08,
+      "agricola_escenario_base_ha_unicas": 5.08,
+      "agricola_escenario_sensibilidad_ha_unicas": 5.08
+    },
+    {
+      "codigo_departamento": "25",
+      "departamento": "UCAYALI",
+      "agrupaciones_recientes": 29,
+      "agrupaciones_revision": 1,
+      "agrupaciones_con_agricultura": 25,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 2323.12,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "12",
+      "departamento": "JUNIN",
+      "agrupaciones_recientes": 17,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 15,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 2000.11,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "06",
+      "departamento": "CAJAMARCA",
+      "agrupaciones_recientes": 10,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 10,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 1400.38,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "19",
+      "departamento": "PASCO",
+      "agrupaciones_recientes": 11,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 11,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 1272.67,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "17",
+      "departamento": "MADRE DE DIOS",
+      "agrupaciones_recientes": 22,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 14,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 1149.07,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "16",
+      "departamento": "LORETO",
+      "agrupaciones_recientes": 9,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 9,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 1099.76,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "22",
+      "departamento": "SAN MARTIN",
+      "agrupaciones_recientes": 4,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 4,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 930.62,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "11",
+      "departamento": "ICA",
+      "agrupaciones_recientes": 4,
+      "agrupaciones_revision": 1,
+      "agrupaciones_con_agricultura": 4,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 748.75,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    },
+    {
+      "codigo_departamento": "10",
+      "departamento": "HUANUCO",
+      "agrupaciones_recientes": 4,
+      "agrupaciones_revision": 0,
+      "agrupaciones_con_agricultura": 4,
+      "grupos_coincidencia_base": 0,
+      "grupos_coincidencia_sensibilidad": 0,
+      "agricola_cercana_ha_unicas": 564.2,
+      "agricola_escenario_base_ha_unicas": 0.0,
+      "agricola_escenario_sensibilidad_ha_unicas": 0.0
+    }
+  ],
+  "advertencia": "Escenarios exploratorios no calibrados. Agricultura cartografiada cercana, no cultivo dañado. Grupos con revisión pendientes fuera de la comparación principal."
+}

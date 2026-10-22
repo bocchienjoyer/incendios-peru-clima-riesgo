@@ -1,0 +1,26 @@
+codigo_departamento,departamento,agrupaciones_recientes,agrupaciones_revision,agrupaciones_con_agricultura,grupos_coincidencia_base,grupos_coincidencia_sensibilidad,agricola_cercana_ha_unicas,agricola_escenario_base_ha_unicas,agricola_escenario_sensibilidad_ha_unicas
+21,PUNO,2,0,1,1,1,5.08,5.08,5.08
+25,UCAYALI,29,1,25,0,0,2323.12,0.0,0.0
+12,JUNIN,17,0,15,0,0,2000.11,0.0,0.0
+06,CAJAMARCA,10,0,10,0,0,1400.38,0.0,0.0
+19,PASCO,11,0,11,0,0,1272.67,0.0,0.0
+17,MADRE DE DIOS,22,0,14,0,0,1149.07,0.0,0.0
+16,LORETO,9,0,9,0,0,1099.76,0.0,0.0
+22,SAN MARTIN,4,0,4,0,0,930.62,0.0,0.0
+11,ICA,4,1,4,0,0,748.75,0.0,0.0
+10,HUANUCO,4,0,4,0,0,564.2,0.0,0.0
+01,AMAZONAS,2,0,2,0,0,458.05,0.0,0.0
+02,ANCASH,2,1,1,0,0,348.42,0.0,0.0
+14,LAMBAYEQUE,1,0,1,0,0,268.01,0.0,0.0
+08,CUSCO,2,0,2,0,0,175.85,0.0,0.0
+05,AYACUCHO,1,0,1,0,0,159.16,0.0,0.0
+04,AREQUIPA,4,0,1,0,0,7.37,0.0,0.0
+09,HUANCAVELICA,2,0,1,0,0,0.06,0.0,0.0
+03,APURIMAC,0,0,0,0,0,0.0,0.0,0.0
+07,CALLAO,0,0,0,0,0,0.0,0.0,0.0
+13,LA LIBERTAD,0,0,0,0,0,0.0,0.0,0.0
+15,LIMA,0,0,0,0,0,0.0,0.0,0.0
+18,MOQUEGUA,5,1,0,0,0,0.0,0.0,0.0
+20,PIURA,0,0,0,0,0,0.0,0.0,0.0
+23,TACNA,0,0,0,0,0,0.0,0.0,0.0
+24,TUMBES,0,0,0,0,0,0.0,0.0,0.0
