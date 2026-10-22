@@ -1,0 +1,3 @@
+# Dependencias directas de la auditoría; versiones efectivas en requirements-auditoria.lock.txt.
+geopandas==1.2.0
+rasterio==1.5.2

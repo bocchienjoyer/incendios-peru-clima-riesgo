@@ -1,0 +1,296 @@
+{
+  "consulta_utc": "2026-10-22T01:25:32.739386+00:00",
+  "alcance": "Auditoría y muestra de un punto; sin ranking",
+  "fuentes": [
+    {
+      "nombre": "firms_snpp_7d.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_South_America_7d.csv",
+      "consulta_utc": "2026-10-22T01:25:32.741340+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "text/csv",
+      "bytes": 4892454,
+      "sha256": "b2eb108c88e89cecaf2aa88570676d754758d04af2db3b6641a30d16a8c2eb7c",
+      "original_local": "data/raw/auditoria/20261022T012532Z/firms_snpp_7d.csv"
+    },
+    {
+      "nombre": "departamentos.geojson",
+      "url": "https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_departamental_simple.geojson",
+      "consulta_utc": "2026-10-22T01:25:32.742841+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 139681,
+      "sha256": "3d34d5450a1b1f059eebdf7386e5b5d071a5063bf3679fcbbbc5314493791290",
+      "original_local": "data/raw/auditoria/20261022T012532Z/departamentos.geojson"
+    },
+    {
+      "nombre": "limites_licencia.txt",
+      "url": "https://raw.githubusercontent.com/juaneladio/peru-geojson/master/LICENSE",
+      "consulta_utc": "2026-10-22T01:25:32.743748+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "original_local": "data/raw/auditoria/20261022T012532Z/limites_licencia.txt"
+    },
+    {
+      "nombre": "worldcover_coleccion.json",
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-worldcover",
+      "consulta_utc": "2026-10-22T01:25:32.744983+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 8688,
+      "sha256": "3d2485603daca9361b7a57d98c5fe64727576c74bd0932288babf8faac0c2c6a",
+      "original_local": "data/raw/auditoria/20261022T012532Z/worldcover_coleccion.json"
+    },
+    {
+      "nombre": "meteorologia_muestra.json",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=-9.05636&longitude=-78.60162&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cprecipitation&models=ecmwf_ifs025&past_days=1&forecast_days=8&timezone=America%2FLima&wind_speed_unit=kmh&temperature_unit=celsius",
+      "consulta_utc": "2026-10-22T01:25:44.358564+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 8313,
+      "sha256": "4ac916a608470f2c2fe05eb72afa9dfc19c782381807919cc5e298b575d25bab",
+      "original_local": "data/raw/auditoria/20261022T012532Z/meteorologia_muestra.json"
+    },
+    {
+      "nombre": "worldcover_items_muestra.json",
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=esa-worldcover&bbox=-78.60262%2C-9.05736%2C-78.60061999999999%2C-9.05536&datetime=2021-01-01T00%3A00%3A00Z%2F2021-12-31T23%3A59%3A59Z&limit=4",
+      "consulta_utc": "2026-10-22T01:25:44.359195+00:00",
+      "estado": "descargado",
+      "http": 200,
+      "content_type": "application/geo+json; charset=utf-8",
+      "bytes": 5363,
+      "sha256": "e1c3d9892e9ab117df8f90bd8881a91d6df1db1f36bf694f0a80fa89cd487d53",
+      "original_local": "data/raw/auditoria/20261022T012532Z/worldcover_items_muestra.json"
+    }
+  ],
+  "comprobaciones": {
+    "limites": {
+      "filas": 25,
+      "crs": "EPSG:4326",
+      "geometrias_invalidas": 0,
+      "geometrias_vacias": 0,
+      "columnas": [
+        "NOMBDEP",
+        "COUNT",
+        "FIRST_IDDP",
+        "HECTARES",
+        "geometry"
+      ],
+      "codigos_duplicados": 0,
+      "procedencia": "Repositorio peru-geojson; README indica INEI 2007",
+      "licencia_archivo": "Mozilla Public License Version 2.0\n==================================\n\n1. Definitions\n--------------\n\n1.1. \"Contributor\"\n    means each individual or "
+    },
+    "firms": {
+      "filas_sudamerica": 59694,
+      "columnas": [
+        "latitude",
+        "longitude",
+        "bright_ti4",
+        "scan",
+        "track",
+        "acq_date",
+        "acq_time",
+        "satellite",
+        "confidence",
+        "version",
+        "bright_ti5",
+        "frp",
+        "daynight"
+      ],
+      "primera_deteccion_utc": "2026-10-14T03:28:00+00:00",
+      "ultima_deteccion_utc": "2026-10-21T19:04:00+00:00",
+      "filas_futuras": 0,
+      "filas_en_limites_peru": 3553,
+      "confianza_en_peru": {
+        "high": 244,
+        "low": 381,
+        "nominal": 2928
+      },
+      "satellites": [
+        "N"
+      ],
+      "duplicados_exactos_peru": 0,
+      "nominal_alta_ultimas_168h": 2727,
+      "nota": "Conteo preliminar para comprobar fuente; no son incendios ni agrupaciones"
+    },
+    "worldcover": {
+      "licencia": "CC-BY-4.0",
+      "periodo": {
+        "interval": [
+          [
+            "2020-01-01T00:00:00Z",
+            "2021-12-31T23:59:59Z"
+          ]
+        ]
+      },
+      "banda": [
+        {
+          "name": "Band1",
+          "nodata": 0,
+          "sampling": "area",
+          "data_type": "uint8",
+          "description": "Classification values",
+          "spatial_resolution": 10
+        }
+      ],
+      "clases": [
+        {
+          "value": 10,
+          "color-hint": "006400",
+          "description": "Tree cover"
+        },
+        {
+          "value": 20,
+          "color-hint": "FFBB22",
+          "description": "Shrubland"
+        },
+        {
+          "value": 30,
+          "color-hint": "FFFF4C",
+          "description": "Grassland"
+        },
+        {
+          "value": 40,
+          "color-hint": "F096FF",
+          "description": "Cropland"
+        },
+        {
+          "value": 50,
+          "color-hint": "FA0000",
+          "description": "Built-up"
+        },
+        {
+          "value": 60,
+          "color-hint": "B4B4B4",
+          "description": "Bare / sparse vegetation"
+        },
+        {
+          "value": 70,
+          "color-hint": "F0F0F0",
+          "description": "Snow and ice"
+        },
+        {
+          "value": 80,
+          "color-hint": "0064C8",
+          "description": "Permanent water bodies"
+        },
+        {
+          "value": 90,
+          "color-hint": "0096A0",
+          "description": "Herbaceous wetland"
+        },
+        {
+          "value": 95,
+          "color-hint": "00CF75",
+          "description": "Mangroves"
+        },
+        {
+          "value": 100,
+          "color-hint": "FAE6A0",
+          "description": "Moss and lichen"
+        }
+      ]
+    },
+    "punto_muestra": {
+      "latitud": -9.05636,
+      "longitud": -78.60162,
+      "departamentos": [
+        "ANCASH"
+      ],
+      "criterio": "Detección nominal/alta más reciente en Perú; solo prueba de acceso",
+      "fecha_deteccion_utc": "2026-10-21T1858"
+    },
+    "meteorologia": {
+      "coordenadas_devueltas": [
+        -9.0,
+        -78.5
+      ],
+      "elevacion_m": 9.0,
+      "zona_horaria": "America/Lima",
+      "modelo_solicitado": "ecmwf_ifs025",
+      "unidades": {
+        "time": "iso8601",
+        "temperature_2m": "°C",
+        "relative_humidity_2m": "%",
+        "wind_speed_10m": "km/h",
+        "precipitation": "mm"
+      },
+      "horas": 216,
+      "inicio_local": "2026-10-20T00:00",
+      "fin_local": "2026-10-28T23:00",
+      "nulos": {
+        "time": 0,
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "wind_speed_10m": 0,
+        "precipitation": 0
+      },
+      "rangos": {
+        "temperature_2m": [
+          22.9,
+          31.1
+        ],
+        "relative_humidity_2m": [
+          51,
+          92
+        ],
+        "wind_speed_10m": [
+          3.7,
+          20.6
+        ],
+        "precipitation": [
+          0.0,
+          0.1
+        ]
+      }
+    },
+    "worldcover_items": [
+      {
+        "id": "ESA_WorldCover_10m_2021_v200_S12W081",
+        "fecha": null,
+        "epsg": 4326,
+        "asset_map": "https://ai4edataeuwest.blob.core.windows.net/esa-worldcover/v200/2021/map/ESA_WorldCover_10m_2021_v200_S12W081_Map.tif",
+        "version": "2.0.0",
+        "inicio_periodo": "2021-01-01T00:00:00Z",
+        "fin_periodo": "2021-12-31T23:59:59Z"
+      }
+    ],
+    "worldcover_lectura": {
+      "estado": "verificado",
+      "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_S12W081_Map.tif",
+      "crs": "EPSG:4326",
+      "resolucion_grados": [
+        8.333333333333333e-05,
+        8.333333333333333e-05
+      ],
+      "tamano_original": [
+        36000,
+        36000
+      ],
+      "nodata": 0.0,
+      "dtype": "uint8",
+      "bandas": 1,
+      "muestra_pixeles": [
+        128,
+        128
+      ],
+      "pixeles_validos": 16384,
+      "clases_en_muestra": {
+        "10": 541,
+        "20": 2356,
+        "30": 636,
+        "50": 3375,
+        "60": 8992,
+        "80": 412,
+        "90": 72
+      },
+      "nota": "Ventana rectangular para comprobar lectura; no es área quemada ni buffer analítico"
+    }
+  }
+}
